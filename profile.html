@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit User Account</title>
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#" class="settings-icon">&#9881;</a> <!-- Settings Icon -->
+  <a href="#" class="nav-link active">Edit Account</a>
+  <a href="home.html" class="nav-link">Back</a>
+  <a href="#" class="nav-link">Logout</a>
+  <button class="save-button" id="saveBtn">Save Changes</button>
+</div>
+
+<!-- Account Editing Form -->
+<div class="container">
+  <h2 class="edit-heading">Edit Your Account</h2>
+  <form id="accountForm" action="update_account.php" method="post">
+    <div class="edit-section">
+      <h3>Edit Username</h3>
+      <input type="text" id="username" name="username" placeholder="Enter your username" value="current_username">
+    </div>
+    <div class="edit-section">
+      <h3>Edit Password</h3>
+      <input type="password" id="currentPassword" name="currentPassword" placeholder="Enter your current password">
+      <input type="password" id="newPassword" name="newPassword" placeholder="Enter your new password">
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your new password">
+    </div>
+    <div class="edit-section">
+      <h3>Edit Contact</h3>
+      <input type="text" id="contact" name="contact" placeholder="Enter your phone number">
+    </div>
+    </div>
+    <input type="hidden" id="contactType" name="contactType" value="phone"> <!-- Hidden input to send contact type to server -->
+  </form>
+</div>
+
+<!-- Include JavaScript -->
+<script src="profile.js"></script>
+</body>
+</html>

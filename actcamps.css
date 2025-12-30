@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.campaign {
+    background-color: #ffffff;
+    border: 2px solid #e97451;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.campaign-title {
+    font-size: 24px;
+    color: #e97451;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #e97451;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.target-money {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.campaign-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo {
+    position: absolute;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.logo1 {
+    top: 20px;
+    left: 20px;
+}
+
+.logo2 {
+    top: 100px;
+    right: 20px;
+}
+
+.logo3 {
+    top: 200px;
+    left: 50px;
+}
+/* Existing styles remain unchanged */
+
+.progress.progress-50 {
+    width: 50%;
+}
+
+.progress.progress-75 {
+    width: 75%;
+}
+.progress-bar {
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 10px;
+    width: 100%; /* Adjust as needed */
+}
+
+.progress {
+    background-color: #e97451;
+    border-radius: 5px;
+    height: 100%;
+}
+.target-money {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.button-link {
+    display: inline-block;
+    background-color: #e97451;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button-link:hover {
+    background-color: #d95d3f;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs</title>
+<style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #e97451;
+            margin-bottom: 20px;
+        }
+        /* Blog styles */
+        .blogs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .blog {
+            width: calc(50% - 10px); /* Two blogs per row with a little spacing */
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border: 2px solid #e97451; /* Border color */
+        }
+        .blog h2 {
+            color: #e97451; /* Title color */
+            border-bottom: 3px double #e97451; /* Additional style: border-bottom with double line */
+            padding-bottom: 10px; /* Add some space between title and border */
+        }
+        .blog p {
+            color: #555;
+        }
+        /* Form styles */
+        form {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #e97451;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #d7603e;
+        }
+    </style>
+    
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Blogs</h1>
+
+    <!-- Button to toggle the form -->
+    <button id="createBlogBtn">Create One</button>
+
+    <!-- Blog form -->
+    <form id="blogForm" action="#" method="post">
+        <label for="blogTitle">Title:</label>
+        <input type="text" id="blogTitle" name="blogTitle" required>
+
+        <label for="blogContent">Content:</label>
+        <textarea id="blogContent" name="blogContent" rows="4" required></textarea>
+
+        <label for="blogAuthor">Your Name:</label>
+        <input type="text" id="blogAuthor" name="blogAuthor" required>
+
+        <input type="submit" value="Post Blog">
+    </form>
+
+    <!-- Display existing blogs -->
+    <div class="blogs">
+        <div class="blog">
+            <h2>Here are some things that monthly donations can accomplish, such as realizing dreams and creating a community of changemakers.</h2>
+            <br>
+            <p>Every tiny town and village in India, a nation with a distinct culture and needs, has a wealth of untold stories to share. All they need is the appropriate platform to present their offerings to the globe. And what better way to accomplish<br> it than by working with grassroots organizations dedicated to improving the lives of innumerable members of society's lowest classes? They support their aspirations for a better life. According to statistics, there is one NGO in India for every 400 individuals, yet many of them lack the funding necessary to achieve their objectives.Wings Fundraising aims to close that gap by putting well-meaning contributors in touch with initiatives that require their immediate support.
+                What do we contribute to the discussion? Verified NGOs, frequent updates, openness, and a special model that enables donors from all over the world to contribute in order to raise money for goods that are needed by NGOs and charities in India and are subsequently supplied by us can be found here. 
+<br>A step in the same direction is our Social Investment Plan. Donors can now make monthly contributions to their preferred causes. They have a long-lasting, noticeable effect. 
+<p>By: Name changed to maintain confidentiality</p>
+                
+                </p>
+        </div>
+
+        <div class="blog">
+            <h2>ENSURE THE SAFETY OF OUR FURRY FRIENDS TO MAKE THIS HOLI  UNIQUE FOR THEM.</h2>
+            <p>By: Mughdha Khatri</p>
+            <p>In India, Holi is a joyous celebration that heralds the entrance of spring. The dhak flowers, also known as the Flame of the Forest, are abundant in Indian cities and rural areas. The festival's mood was one of love and happiness. However, if stray animals get into touch with the colors, get struck by water balloons, or get pelted with other objects, this celebration could be dangerous. 
+<br>Social media was ablaze with tales of a pet dog named Roxie who was tethered in a Dehradun home's patio during Holi last year. When some males flung gulaal (dry colour used for Holi), the poor animal was in agony. Some.  </p>
+        </div>
+        <div class="blog">
+            <h2>Empowering the Future: The Impact of Donating to Child Welfare</h2>
+            <p>By: Nandini Kapoor</p>
+            <p>Encouraging child wellbeing is essential in a world where children are at risk. A shopkeeper in a remote area named Rajesh Sharma exemplifies this through his donations. The previous year, he
+<ul>
+                <li>50 Children's Education Was Sponsored</li>
+                <li>Sufficient Meals for One Hundred Children</li>
+                <li>30 Children's Medical Costs Are Covered</li>
+                <li>Others in Rajesh's neighborhood were also motivated by his contributions. Even with issues like child labor and poverty, progress is visible</li>
+                
+                <li>In India, 22% of people are impoverished</li>.
+                <li>150 million youngsters worldwide are working as minors.</li>
+                </ul>
+            </p>
+            <p>In summary, making a donation to child welfare is a wise investment in the future as well as a kind deed. By lending our support to groups that put children's welfare first, we can make the world a place where all children have the chance to prosper. Thus, let's do what Nandini Kapoor and countless others are doing—one donation at a time—to improve the lives of children.
+                Furthermore, Nandini's efforts have given the neighborhood the confidence to act. Other store owners and locals have been motivated by her kindness to contribute to child welfare programs, which has had a beneficial knock-on effect on the hamlet.
+            </p>
+        </div>
+        <div class="blog">
+            <h2>Paws of Hope: Transforming Lives through Street Dog Fundraising</h2>
+            <p>By: Ravi Kumar</p>
+            <p>A silent but hardy community survives in the madness of urban life on India's busy streets: the street dogs. These ignored animals struggle on a daily basis with issues like malnutrition, illness, and maltreatment. However, kind people do arise amid hardship, spearheading fundraising campaigns to support the cause of these unsung heroes.
+             Here comes Ravi Kumar, a man from Mumbai who is an average man with an exceptional heart. Ravi was inspired to take action after seeing the suffering of the neighborhood's street dogs. He set out on a mission to genuinely improve the lives of these four-legged friends, using empathy and tenacity as his compass.Ravi's quest started with a straightforward yet meaningful idea: to gather resources and support for neighborhood animal welfare groups that specialize in the care and rescue of street dogs. Ravi's hard activism and community involvement paid off, giving street canines a glimmer of hope despite their many difficulties.
+             <br>His fundraising efforts produced impressive outcomes, including vital funding for programs aimed at spaying and neutering dogs as well as necessary medical care, immunizations, and shelter help for many of Mumbai's homeless dogs. However, Ravi's influence went much beyond the material world.</p>
+             <p>Through elevating the voices of those without a voice, Ravi created a ripple effect of compassion and harmony in his community. By his deeds, he sparked a compassionate movement that inspired others to take up the cause and serve as independent advocates for animal welfare.
+             In spite of the advancements, the obstacles remained significant. India has more than 35 million stray dogs running the streets, so help was still desperately needed. Strong barriers were cultural attitudes, resource scarcity, and rapid urbanization. But in the face of hardship, Ravi's persistent dedication acted as a ray of hope.</p>
+        </div>
+        <!-- Add more blogs here -->
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle the form visibility
+    const createBlogBtn = document.getElementById('createBlogBtn');
+    const blogForm = document.getElementById('blogForm');
+
+    createBlogBtn.addEventListener('click', function() {
+        if (blogForm.style.display === 'none') {
+            blogForm.style.display = 'block';
+            createBlogBtn.textContent = 'Hide Form';
+        } else {
+            blogForm.style.display = 'none';
+            createBlogBtn.textContent = 'Create One';
+        }
+    });
+</script>
+
+</body>
+</html>

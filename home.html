@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+/* Sticky Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #333; /* Dark color for navbar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd; /* Light color on hover */
+  color: black;
+}
+
+/* Services tab */
+.services-tab {
+  background-color: #e97451; /* Services tab color */
+  color: white;
+  padding: 10px;
+}
+
+/* Content container */
+.content {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh; /* Adjusted to fill the entire viewport height */
+  background-image: url('https://blog.depositphotos.com/brown-color.html/vestrahorn-mountain-in-iceland');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+.content-inner {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.content-inner h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-inner p {
+  color: black;
+  font-family: italic; /* Change to desired color */
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px; /* Adjust the width of the logo */
+  margin-right: 10px; /* Add some space between the logo and text */
+}
+
+.wings-text {
+  color: black; /* Color for "Wings" text */
+}
+
+.description {
+  margin-top: -10px; /* Adjust the top margin to move the text up */
+}
+
+/* Profile section styles */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="NGO's.html">NGOs</a>
+  <a href="FAQs.html">FAQs</a>
+  <a href="services.html">Services</a>
+  <a href="Blogs.html">Blogs</a>
+  <a href="Profile.html">Edit Profile</a>
+  <a href="logout.php">Logout</a> 
+  <a href="reqcamp.html">Request Campaign</a>
+</div>
+
+<div class="services-tab">
+  <h2>Your premier destination for impactful crowdfunding.</h2>
+  <p>Discover our array of services and unite with us to create positive change.</p>
+</div>
+
+<div class="content">
+  <div class="content-inner">
+    <h2>Welcome to <span class="wings-text">Wings</span> Donations.</h2>
+    <br><br>
+    <p class="description">With Wings, we're dedicated to empowering your</p>
+    <p>philanthropic endeavors. Together, let's soar towards a brighter future.</p>
+  </div>
+</div>
+
+</body>
+</html>

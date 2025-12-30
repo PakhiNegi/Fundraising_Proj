@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Platform Services</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background: linear-gradient(to bottom right, #e97451, #f7ad93); /* Gradient background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .service img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            margin-top: 0;
+        }
+
+        .button-link {
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #555;
+        }
+
+        .Back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .arrow {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Services</h1>
+    <div class="service">
+        <img src="https://t4.ftcdn.net/jpg/02/45/79/31/360_F_245793168_tjdfZf9BufnI03jChM5Fd6cXxGmU3DLn.jpg" alt="Goods Box">
+        <h3>Donate Goods</h3>
+        <p>Description of the service goes here.</p>
+        <a href="goods.html" class="button-link">Check NGOs</a>
+    </div>
+
+    <div class="service">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ8SxgbPhwiyAr2y6ud77K9AnexDdRanJYyQ&usqp=CAU" alt="money">
+        <h3>Donate Money</h3>
+        <p>Description of Donating Money goes here.</p>
+        <a href="money.html" class="button-link">Check NGOs</a>
+    </div>
+
+    <div class="service">
+        <img src="https://i.imgur.com/2ptXG24.png" alt="history">
+        <h3>Check History</h3>
+        <p>Know about your previous money donations</p>
+        <a href="history.php" class="button-link">Your History</a>
+    </div>
+
+    <div class="service">
+        <img src="https://i.imgur.com/wZbnoes.jpeg" alt="Stand with the campaign">
+        <h3>Stand with the campaign</h3>
+        <p>Assist in raising funds</p>
+        <a href="actcampaigns.html" class="button-link">Donate in Campaigns</a>
+    </div>
+
+    <a href="index.html" class="Back"><span class="arrow">&larr;</span>Back</a>
+</body>
+</html>

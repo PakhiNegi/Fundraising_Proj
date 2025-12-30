@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333333; /* Text color */
+        }
+        h1, h2 {
+            text-align: center;
+            color: #e97451; /* Title color */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007bff; /* Link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .icon {
+            font-size: 30px;
+            color: #e97451;
+            margin: 0 10px;
+        }
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .animation {
+            width: 50px;
+            height: 50px;
+            background-color: #e97451;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    
+
+        .faq-section {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .question {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .answer.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+ <div class="faq-section">
+    
+<div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <h2>Donors</h2>
+    <ul>
+        <li><strong>What is Wings?</strong><br>
+            Wings is India's one of a kind crowdfunding platform that allows donors to directly donate towards products that are required by the NGO. In the last 5 years, we have partnered with 1400+ NGOs all over India to raise 150+ crores worth of products. More than 5 lakh unique donors have used our platform to donate to charities of their choice. As a donor, you are guaranteed 100% transparency - after you donate towards the products, you will receive an update from the campaigner.</li>
+    </ul>
+    <div class="question">
+        <strong>How to claim Tax-Exemption for my contributions on Wings?</strong>
+        <div class="answer">You can claim tax-exemption for your contributions by providing the necessary documentation to the tax authorities.</div>
+    </div>
+    <div class="question">
+        <strong>How To Avail 10BE?</strong>
+        <div class="answer">To avail 10BE, you need to follow the specific instructions provided by Wings.</div>
+    </div>
+    <!-- Add more questions and answers similarly -->
+    <div class="question">
+        <strong>Can I donate products offline visiting the NGO?</strong>
+        <div class="answer">Yes, many NGOs accept offline donations. You can visit the NGO directly and inquire about their donation process.<br> They may have specific guidelines and requirements for accepting offline donations.</div>
+    </div>
+    <div class="question">
+        <strong>Can I donate second hand/used products</strong>
+        <div class="answer">It depends on the policies of the NGO you're donating to. Some NGOs accept second-hand or used products, while others may only accept new items.<br> It's best to check with the NGO directly to see if they have any restrictions or preferences regarding the condition of donated items.</div>
+        </div>
+       <div class="question">
+        <strong>Why Wings is better than other platforms?</strong>
+        <div class="answer">Wings offers complete transparency, direct impact, a wide network of partnered NGOs, and user-friendly<br> platform, making it stand out among other crowdfunding platforms.</div>
+    </div>
+    <div class="question">
+        <strong>Are the campaigns on Wings Donations genuine?</strong>
+        <div class="answer">Prior to being included on our website, all initiatives on Donatekart Life must undergo a rigorous sequence of filtering processes and<br> verification by our highly devoted crew. This covers things like medical records, background checks, therapy estimates, and more.
+            .</div>
+    </div>
+    <div class="question">
+        <strong>Why do we collect a tip amount ?</strong>
+        <div class="answer">Sometimes prices of the products change during the course of the campaign, we use these tips to cover the hike in prices and deliver<br> the goods to NGOs.
+        Tip is a voluntary contribution towards our platform and donors can choose to give any amount as tips.</div>
+    </div>
+    <div class="question">
+        <strong>Is crowdfunding legal in India?</strong>
+        <div class="answer">Indeed, crowdfunding with an emphasis on internet donations for personal, medical, and societal purposes is allowed in India. All types of crowdfunding are deemed permissible in India by the Securities and Exchange Board of India (SEBI), with the exception of equity crowdfunding. Certain crowdfunding companies are recognized as charitable trusts under the Income Tax Act. Under section 80G, contributions made to these donation platforms are deductible from income tax.
+         More than 30 lakh donors can provide funding for your medical treatment through Wings Donations.</div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    // JavaScript to toggle answer visibility
+    document.querySelectorAll('.question').forEach(function(question) {
+        question.addEventListener('click', function() {
+            this.querySelector('.answer').classList.toggle('active');
+        });
+    });
+</script>
+<div class="icon-container">
+    <div class="icon">&#128202;</div>
+    <div class="icon">&#127759;</div>
+    <div class="icon">&#128522;</div>
+</div>
+
+<div class="animation-container">
+    <div class="animation"></div>
+</div>
+
+</body>
+</html>

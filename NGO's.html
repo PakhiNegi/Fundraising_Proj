@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Sliding Flashcards</title>
+    <style>
+        /* Your CSS styles */
+        .flashcard-container {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border: 1px solid #e97451; /* Color theme */
+            position: relative;
+        }
+
+        .flashcards {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-bottom: 1px solid #e97451; /* Color theme */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flashcard img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .flashcard-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .flashcard-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            margin-top: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #e97451; /* Color theme */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #e97451; /* Color theme */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your HTML code here -->
+<div class="flashcard-container">
+    <div class="flashcards">
+        <div class="flashcard">
+            <h2 class="flashcard-title">Shuddhi NGO</h2>
+            <p class="flashcard-description">Shuddhi NGO conducts cleanliness campaigns with the aid of volunteers and change-agents. Your support helps us execute #swachhbharat, fostering a cleaner India. Amid the ongoing CORONA Pandemic, we provided meals, masks, and sanitizers to vulnerable children. Your donation feeds hungry children. We organize events promoting women's empowerment and education.</p>
+            <div class="btn-container">
+                <a href="https://shuddhi.org/donate.html?gad_source=1&gclid=CjwKCAiA6KWvBhAREiwAFPZM7jpCTiE7pl_LYY47K_Yr1eM3SBKiQHh3af7McQKmaCuTgB001FIFfBoCi8wQAvD_BwE" class="btn">Pay a Visit</a>
+            </div>
+        </div>
+        <div class="flashcard">
+            <h2 class="flashcard-title">HelpAge India</h2>
+            <p class="flashcard-description">HelpAge India is a leading charity platform in India working with and for disadvantaged elderly for more than 4 decades.</p>
+            <div class="btn-container">
+                <a href="https://www.helpageindia.org/?utm_source=google&utm_medium=search&utm_campaign=onlinedonation&utm_term=donations&gclid=EAIaIQobChMIvKDplMnihAMVxBWDAx1kLwONEAAYAiAAEgI57PD_BwE" class="btn">Pay a Visit</a>
+            </div>
+        </div>
+        <!-- Add more flashcards for other NGOs -->
+        <div class="flashcard">
+            <h2 class="flashcard-title">Shree Chatrapati Mukbadhir Vidyalaya</h2>
+             <p class="flashcard-description">Shree Chatrapati Mukbadhir Vidyalaya is an esteemed non-governmental organization (NGO) dedicated to the noble cause of working for mentally challenged children. Founded with a deep-rooted commitment to providing comprehensive care, education, and support to children with cognitive disabilities, the organization operates with a vision to empower every child with special needs to reach their fullest potential and lead fulfilling lives.</p>
+            <div class="btn-container">
+                <a href="https://www.bing.com/ck/a?!&&p=c18bceab254582d0JmltdHM9MTcxMDAyODgwMCZpZ3VpZD0yNzRiOGNiNy0yMWQyLTY0MTMtMmViOC05ZDhiMjA2MDY1MGYmaW5zaWQ9NTIwMQ&ptn=3&ver=2&hsh=3&fclid=274b8cb7-21d2-6413-2eb8-9d8b2060650f&psq=Shri+Chhatrapati+Muk+badhir+Vidyalaya+site&u=a1aHR0cHM6Ly9kaXJlY3RvcnkuZWR1Z29yaWxsYS5jb20vc2Nob29sL211ay1iYWRoaXItdmlkeWFsYXktYmFidXBldGgtY2hhbmRyYXB1ci1mZWUtc3RydWN0dXJlLXN5bGxhYnVzLWFkZHJlc3MtYWRtaXNzaW9uLWZvcm0tY29udGFjdC1udW1iZXIv&ntb=1" class="btn">Pay a Visit</a>
+            </div>
+        </div>
+        <div class="flashcard">
+            <h2 class="flashcard-title">Rapid Response Organization</h2>
+            <p class="flashcard-description">An award-winning organization, Rapid Response offers preparedness, recovery, and relief from disasters all over India.
+                As a disaster relief organization, we provide food, health care, education, shelter, and livelihood initiatives to assist individuals in surviving and rebuilding their lives.
+                Thousands of lives have been affected by our most recent actions in Maharashtra, Karnataka, and Assam!</p>
+            <div class="btn-container">
+                <a href="https://www.rapidresponse.org.in/" class="btn">Pay a Visit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for vertical sliding -->
+<script>
+    const flashcards = document.querySelector('.flashcards');
+    let translateY = 0;
+    const slideAmount = 25; // Adjust this value to control the sliding speed
+
+    function slideUp() {
+        translateY -= slideAmount;
+        flashcards.style.transform = `translateY(${translateY}%)`;
+    }
+
+    function slideDown() {
+        translateY += slideAmount;
+        flashcards.style.transform = `translateY(${translateY}%)`;
+    }
+</script>
+
+
+<!-- Buttons for sliding -->
+<button onclick="slideUp()">Down</button>
+<button onclick="slideDown()">Up</button>
+
+</body>
+</html>

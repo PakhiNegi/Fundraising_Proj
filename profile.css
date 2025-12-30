@@ -1,0 +1,68 @@
+/* CSS styles for your page */
+
+/* Navigation Bar */
+.navbar {
+  background-color: #e97451;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.settings-icon {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+/* Edit Account Form */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.edit-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.edit-section {
+  margin-bottom: 30px;
+}
+
+.edit-section h3 {
+  font-size: 24px;
+  color: #e97451; /* Edit section heading color */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.save-button {
+  background-color: #e97451; /* Save button background color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #d65d41; /* Save button background color on hover */
+}
+
+

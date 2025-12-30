@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</Form></title>
+    <link rel="stylesheet" href="regstyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h2>Register Now!</h2>
+            <div id="registrationSuccess" class="hidden">
+                <p>You have successfully registered!</p>
+              </div>
+              <a href="home.html" id="homeLink" class="hidden">Home</a>
+              
+            <form method="post" action="register.php">
+              <input type="text" id="username" name="username"
+                placeholder="Enter Username" required>
+                <input type="email" id="email" name="email" placeholder="Enter Valid Email" required>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <br><br>
+                <button type="submit">Register</button>
+                <p class="login">Already have an account?<a href="login.html">Login</a>.</p>
+            </form>
+            <br><br><br><br>
+            <a href="index.html"class="Back"><span class="arrow">&larr;</span>Back</a>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="register.js"></script>
+
+</body>
+</html>

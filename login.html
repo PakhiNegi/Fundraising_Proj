@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="logstyles.css">
+<style>
+
+.message-box {
+  display: none; /* Initially hide the message box */
+  border: 2px solid #e97451;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  text-align: center;
+}
+.message-box.show {
+  display: block; /* Show the message box when the 'show' class is applied */
+}
+h2 {
+  color: #e97451;
+}
+</style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="loginForm" action="login.php" method="post">
+    <div class="input-group">
+      <label for="username">Enter Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Enter Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Login</button>
+    <p id="error" class="error"></p>
+  </form>
+  <br><br><br><br>
+  
+  <p>Don't have an account? <a href="register.html" class="btn">Register</a></p>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

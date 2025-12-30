@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Gateway</title>
+<style>
+/* CSS styles go here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Top bar styles */
+.top-bar {
+    background-color: #e97451;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styles */
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+/* Important content styles */
+.middle-content {
+    color: #e97451;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* NGO list styles */
+.ngo-list {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: left;
+}
+
+/* Individual NGO item styles */
+.ngo-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #e97451; /* Box background color */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px; /* Adjusted to make space for the top bar */
+    text-align: center;
+}
+
+/* Form styles */
+.container form {
+    color: white; /* Form text color */
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container input[type="number"],
+.container select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #fff; /* Form element border color */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2); /* Form element background color */
+    color: white; /* Form element text color */
+}
+
+.container select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+.container button[type="submit"] {
+    background-color: #fff; /* Submit button background color */
+    color: #e97451; /* Submit button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #d1603d; /* Darker shade for hover effect */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Make a Payment</h2>
+  <form id="paymentForm" action="moneypayment.php" method="post">
+    <label for="username">UserName:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <br><br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+    <br><br>
+    <label for="currency">Currency:</label>
+    <select id="currency" name="currency" required>
+      <option value="INR" selected>INR (Rupees)</option>
+    </select>
+    <br><br>
+    <label for="paymentMethod">Payment Method:</label>
+    <select id="paymentMethod" name="paymentMethod" required>
+      <option value="Credit Card">Credit Card</option>
+      <option value="PayPal">PayPal</option>
+      <option value="Stripe">Stripe</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit Payment</button>
+  </form>
+</div>
+
+</body>
+</html>

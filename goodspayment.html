@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Donation</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .goods-item {
+            margin-bottom: 10px;
+        }
+        #total {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #e97451;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #d7603e;
+        }
+        .bill {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+            display: none;
+        }
+        .bill h2 {
+            text-align: center;
+        }
+        .bill-content {
+            margin-top: 20px;
+        }
+        .bill-content p {
+            margin-bottom: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        .container h1.center-align {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">Goods Donation</h1>
+        <div class="goods-list">
+            <div class="goods-item">
+                <label for="warmclothes">Warm Clothes:</label>
+                <input type="number" id="warmclothes" class="quantity" value="0" min="0" title="Enter the quantity of Warm Clothes">
+            </div><br>
+            <div class="goods-item">
+                <label for="books">Books:</label>
+                <input type="number" id="books" class="quantity" value="0" min="0" title="Enter the quantity of Books">
+            </div><br>
+            <div class="goods-item">
+                <label for="sanitarynapkins">Sanitary Napkins:</label>
+                <input type="number" id="sanitarynapkins" class="quantity" value="0" min="0" title="Enter the quantity of sanitary napkins">
+            </div><br>
+            <div class="goods-item">
+                <label for="foodpackages">Food Packages(Non-perishable):</label>
+                <input type="number" id="foodpackages" class="quantity" value="0" min="0" title="Enter the quantity of Food Packages">
+            </div><br>
+            <div class="goods-item">
+                <label for="waterjars">Drinking water jars:</label>
+                <input type="number" id="waterjars" class="quantity" value="0" min="0" title="Enter the quantity of Waterjar">
+            </div><br>
+            <div class="goods-item">
+                <label for="schoolbags">School Bags:</label>
+                <input type="number" id="schoolbags" class="quantity" value="0" min="0" title="Enter the quantity of School Bags">
+            </div><br>
+        </div>
+        <div id="total">Total: ₹0</div>
+        <button id="calculate">Calculate Total</button>
+        
+        <form id="donationForm" action="goodspaygate.php" method="POST">
+            <div class="bill">
+                <h2>Donation Bill</h2>
+                <div class="bill-content">
+                    <p>Username: <span id="username">username</span></p>
+                    <p>Total Amount: <span id="billTotal">₹0</span></p>
+                    <p>
+                        Payment Method:
+                        <select id="paymentMethod" name="paymentMethod">
+                            <option value="credit_card">Credit Card</option>
+                            <option value="debit_card">Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <!-- Add more payment methods as needed -->
+                        </select>
+                    </p>
+                    <!-- Hidden input fields for username and total amount -->
+                    <input type="hidden" id="usernameField" name="username" value="">
+                    <input type="hidden" id="totalAmountField" name="total_amount" value="0">
+                </div>
+                <button id="confirmPayment" type="button">Confirm Payment</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('calculate').addEventListener('click', function() {
+            var warmClothes = parseInt(document.getElementById('warmclothes').value);
+            var books = parseInt(document.getElementById('books').value);
+            var sanitaryNapkins = parseInt(document.getElementById('sanitarynapkins').value);
+            var foodPackages = parseInt(document.getElementById('foodpackages').value);
+            var waterJars = parseInt(document.getElementById('waterjars').value);
+            var schoolBags = parseInt(document.getElementById('schoolbags').value);
+    
+            var total = (warmClothes * 500) + (books * 200) + (sanitaryNapkins * 5) + (foodPackages * 42) + (waterJars * 130) + (schoolBags * 250);
+            document.getElementById('total').innerText = 'Total: ₹' + total;
+    
+            // Set total amount to hidden input field
+            document.getElementById('totalAmountField').value = total;
+    
+            document.querySelector('.bill').style.display = 'block';
+            document.getElementById('billTotal').innerText = '₹' + total;
+        });
+    
+        document.getElementById('confirmPayment').addEventListener('click', function() {
+            // Set username to hidden input field
+            var username = document.getElementById('username').innerText;
+            document.getElementById('usernameField').value = username;
+
+            // Debugging: Display username and total amount
+            console.log('Username:', username);
+            console.log('Total Amount:', document.getElementById('totalAmountField').value);
+            console.log('Payment Method:', document.getElementById('paymentMethod').value);
+    
+            // Submit the form
+            document.getElementById('donationForm').submit();
+        });
+    </script>
+</body>
+</html>
+
